@@ -1,10 +1,8 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import { Calendar, Tag } from 'lucide-react';
-
 interface Poem {
   id: string;
   title: string;
@@ -13,15 +11,13 @@ interface Poem {
   tags: string[];
   preview: string;
 }
-
-const poems: Poem[] = [
-  {
-    id: 'a-day-after-i-died',
-    title: 'a day after i died',
-    date: 'no date',
-    tags: ['death', 'existence', 'peace'],
-    preview: "what's left in me / there is none / search for reason / but it is done",
-    content: `what's left in me
+const poems: Poem[] = [{
+  id: 'a-day-after-i-died',
+  title: 'a day after i died',
+  date: 'no date',
+  tags: ['death', 'existence', 'peace'],
+  preview: "what's left in me / there is none / search for reason / but it is done",
+  content: `what's left in me
 there is none
 search for reason
 but it is done
@@ -53,25 +49,23 @@ off i go wandering to nowhere
 somehow, i don't even care
 maybe it's because i can't 
 because im dead, a life i once had`
-  },
-  {
-    id: 'all-by-myself',
-    title: 'all by myself',
-    date: '12-08-24',
-    tags: ['loneliness', 'perseverance', 'night'],
-    preview: "i wanna walk with you somewhere in the edges of night / too bad you're not here...",
-    content: `i wanna walk with you somewhere in the edges of night
+}, {
+  id: 'all-by-myself',
+  title: 'all by myself',
+  date: '12-08-24',
+  tags: ['loneliness', 'perseverance', 'night'],
+  preview: "i wanna walk with you somewhere in the edges of night / too bad you're not here...",
+  content: `i wanna walk with you somewhere in the edges of night
 too bad you're not here, so i have to keep looking for some light
 i gotta keep pushing and keep up the fight
 through the darkest of days and the endless of nights`
-  },
-  {
-    id: 'you-did-this-to-yourself',
-    title: 'you did this to yourself',
-    date: 'no date',
-    tags: ['self-blame', 'emptiness', 'abandonment'],
-    preview: "all the poetry i have to offer / all the jokes both good and bad / yet that emptiness lingers",
-    content: `all the poetry i have to offer
+}, {
+  id: 'you-did-this-to-yourself',
+  title: 'you did this to yourself',
+  date: 'no date',
+  tags: ['self-blame', 'emptiness', 'abandonment'],
+  preview: "all the poetry i have to offer / all the jokes both good and bad / yet that emptiness lingers",
+  content: `all the poetry i have to offer
 all the jokes both good and bad
 yet that emptiness lingers
 
@@ -86,14 +80,13 @@ unless there isn't anything to feel, because the emptiness lingers
 people will leave you
 and you will suffer
 all that is left is the emptiness you have become`
-  },
-  {
-    id: 'lies',
-    title: 'lies',
-    date: 'no date',
-    tags: ['deception', 'existence', 'facade'],
-    preview: "in lies i wander / in broken promises i stand / in anonymity i continue to exist",
-    content: `in lies i wander
+}, {
+  id: 'lies',
+  title: 'lies',
+  date: 'no date',
+  tags: ['deception', 'existence', 'facade'],
+  preview: "in lies i wander / in broken promises i stand / in anonymity i continue to exist",
+  content: `in lies i wander
 in broken promises i stand
 in anonymity i continue to exist
 alone till i cease to exist
@@ -101,14 +94,13 @@ alone till i cease to exist
 her face is nothing more than a facade
 hiding dirty secrets waiting to be cast
 (....unfinished noises....)`
-  },
-  {
-    id: 'delusional',
-    title: 'delusional',
-    date: 'no date',
-    tags: ['fantasy', 'longing', 'memory'],
-    preview: "i see you on the sidewalks / i see you on the billboards",
-    content: `i see you on the sidewalks
+}, {
+  id: 'delusional',
+  title: 'delusional',
+  date: 'no date',
+  tags: ['fantasy', 'longing', 'memory'],
+  preview: "i see you on the sidewalks / i see you on the billboards",
+  content: `i see you on the sidewalks
 i see you on the billboards
 
 that's how i remember it, as it never was
@@ -118,14 +110,13 @@ now i look upon the night sky
 wish upon a star
 that you hold my hand
 and never away far`
-  },
-  {
-    id: 'eyes-wide-open',
-    title: 'eyes wide open',
-    date: 'continuation to "blindfold"',
-    tags: ['realization', 'love', 'awakening'],
-    preview: "you lived rent free in my head / i lied, i did like it...",
-    content: `you lived rent free in my head
+}, {
+  id: 'eyes-wide-open',
+  title: 'eyes wide open',
+  date: 'continuation to "blindfold"',
+  tags: ['realization', 'love', 'awakening'],
+  preview: "you lived rent free in my head / i lied, i did like it...",
+  content: `you lived rent free in my head
 i lied, i did like it. 
 i knew we'd never be together
 but then, i still wanted it
@@ -144,14 +135,13 @@ you lived rent free in my head
 i have finally stopped it. 
 we'd never be together
 you will never be my lover.`
-  },
-  {
-    id: 'blindfold',
-    title: 'blindfold',
-    date: 'no date',
-    tags: ['obsession', 'love', 'beauty'],
-    preview: "you live rent free in my head / i don't like it...",
-    content: `you live rent free in my head
+}, {
+  id: 'blindfold',
+  title: 'blindfold',
+  date: 'no date',
+  tags: ['obsession', 'love', 'beauty'],
+  preview: "you live rent free in my head / i don't like it...",
+  content: `you live rent free in my head
 i don't like it. 
 i wish we could be together
 i really want it. 
@@ -170,14 +160,13 @@ you live rent free in my head
 i can't stop it. 
 i wish we could be together
 can i be your lover?`
-  },
-  {
-    id: 'bucky',
-    title: 'bucky',
-    date: '2023?',
-    tags: ['unrequited', 'regret', 'fear'],
-    preview: "You see, there was this person called as Bucky / And Oh man, was I lucky",
-    content: `You see, there was this person called as Bucky
+}, {
+  id: 'bucky',
+  title: 'bucky',
+  date: '2023?',
+  tags: ['unrequited', 'regret', 'fear'],
+  preview: "You see, there was this person called as Bucky / And Oh man, was I lucky",
+  content: `You see, there was this person called as Bucky
 And Oh man, was I lucky
 She was the epitome of being kind
 And it completely baffled my mind
@@ -221,14 +210,13 @@ You see, there was this person called as Bucky
 But she and I were never meant to be
 Her kindness, an experience to live by
 Nevertheless, it was all a lie.`
-  },
-  {
-    id: 'early',
-    title: 'Early',
-    date: '08/30/24',
-    tags: ['mortality', 'fear', 'sickness'],
-    preview: "If my life is like the snow, / That fades before the morning sun...",
-    content: `If my life is like the snow,
+}, {
+  id: 'early',
+  title: 'Early',
+  date: '08/30/24',
+  tags: ['mortality', 'fear', 'sickness'],
+  preview: "If my life is like the snow, / That fades before the morning sun...",
+  content: `If my life is like the snow,
 That fades before the morning sun.
 Then I can't help but wish to know,
 Am I the only one?
@@ -247,18 +235,13 @@ I still wonder if my life were like the stone,
 Who eternally smiles upon the rising sun,
 Would I have ever gotten the chance,
 To be someone.`
-  }
-];
-
+}];
 const Blog = () => {
   const [selectedPoem, setSelectedPoem] = useState<Poem | null>(null);
   const [filter, setFilter] = useState<string>('all');
-
   const allTags = Array.from(new Set(poems.flatMap(poem => poem.tags)));
   const filteredPoems = filter === 'all' ? poems : poems.filter(poem => poem.tags.includes(filter));
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       <div className="pt-24 pb-16 px-4">
@@ -268,42 +251,22 @@ const Blog = () => {
             <h1 className="text-4xl md:text-6xl font-bold font-mono mb-4">
               read my <span className="text-primary">mind</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              raw thoughts, unfiltered emotions, and the chaos inside a 19-year-old's head.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">raw thoughts, unfiltered emotions.</p>
           </div>
 
           {/* Filter Tags */}
           <div className="flex flex-wrap gap-2 justify-center mb-8">
-            <Button
-              variant={filter === 'all' ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setFilter('all')}
-              className="text-xs"
-            >
+            <Button variant={filter === 'all' ? 'default' : 'outline'} size="sm" onClick={() => setFilter('all')} className="text-xs">
               all
             </Button>
-            {allTags.map(tag => (
-              <Button
-                key={tag}
-                variant={filter === tag ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setFilter(tag)}
-                className="text-xs"
-              >
+            {allTags.map(tag => <Button key={tag} variant={filter === tag ? 'default' : 'outline'} size="sm" onClick={() => setFilter(tag)} className="text-xs">
                 #{tag}
-              </Button>
-            ))}
+              </Button>)}
           </div>
 
           {/* Poems Grid */}
           <div className="grid gap-6">
-            {filteredPoems.map((poem) => (
-              <Card 
-                key={poem.id} 
-                className="cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
-                onClick={() => setSelectedPoem(poem)}
-              >
+            {filteredPoems.map(poem => <Card key={poem.id} className="cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-lg" onClick={() => setSelectedPoem(poem)}>
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <h3 className="text-xl font-bold font-mono text-primary">{poem.title}</h3>
@@ -313,11 +276,9 @@ const Blog = () => {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-1 mt-2">
-                    {poem.tags.map(tag => (
-                      <span key={tag} className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground">
+                    {poem.tags.map(tag => <span key={tag} className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground">
                         #{tag}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -328,15 +289,13 @@ const Blog = () => {
                     read full →
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </div>
 
       {/* Poem Modal */}
-      {selectedPoem && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      {selectedPoem && <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-card border border-border rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex items-start justify-between mb-4">
@@ -347,19 +306,12 @@ const Blog = () => {
                     {selectedPoem.date}
                   </div>
                   <div className="flex flex-wrap gap-1">
-                    {selectedPoem.tags.map(tag => (
-                      <span key={tag} className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground">
+                    {selectedPoem.tags.map(tag => <span key={tag} className="text-xs bg-secondary px-2 py-1 rounded-full text-muted-foreground">
                         #{tag}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setSelectedPoem(null)}
-                  className="text-muted-foreground hover:text-foreground"
-                >
+                <Button variant="ghost" size="sm" onClick={() => setSelectedPoem(null)} className="text-muted-foreground hover:text-foreground">
                   ✕
                 </Button>
               </div>
@@ -371,8 +323,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4">
@@ -382,8 +333,6 @@ const Blog = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Blog;
