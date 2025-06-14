@@ -41,7 +41,7 @@ const About = () => {
               <Card className="p-6 bg-card border-border">
                 <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center mb-4 overflow-hidden">
                   <img 
-                    src="/lovable-uploads/9119b437-4683-4114-8344-bc0db103f6b4.png" 
+                    src="/lovable-uploads/a6f8b573-9e0b-4b4c-99ad-5014bffe00d5.png" 
                     alt="sanjith"
                     className="w-full h-full object-cover"
                   />
