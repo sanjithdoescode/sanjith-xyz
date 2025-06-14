@@ -1,5 +1,3 @@
-
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
@@ -32,10 +30,10 @@ const Contact = () => {
     },
     {
       platform: 'Instagram',
-      handle: 'blahbluebleela',
-      url: 'https://instagram.com/blahbluebleela',
+      handle: 'i am not a loser',
+      url: '#',
       icon: Instagram,
-      description: 'life in pixels'
+      description: ''
     }
   ];
 
@@ -75,22 +73,30 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground">
-                      {contact.description}
-                    </p>
+                    {contact.description && (
+                      <p className="text-sm text-muted-foreground">
+                        {contact.description}
+                      </p>
+                    )}
                     <Button 
-                      asChild 
+                      asChild={contact.url !== '#'} 
                       variant="outline" 
                       className="w-full border-foreground text-foreground hover:bg-foreground hover:text-background group-hover:border-primary group-hover:text-primary group-hover:hover:bg-primary group-hover:hover:text-primary-foreground transition-colors"
                     >
-                      <a 
-                        href={contact.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="font-mono"
-                      >
-                        {contact.handle}
-                      </a>
+                      {contact.url !== '#' ? (
+                        <a 
+                          href={contact.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="font-mono"
+                        >
+                          {contact.handle}
+                        </a>
+                      ) : (
+                        <span className="font-mono cursor-default">
+                          {contact.handle}
+                        </span>
+                      )}
                     </Button>
                   </CardContent>
                 </Card>
@@ -131,4 +137,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
