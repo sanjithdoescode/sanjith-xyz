@@ -1,10 +1,14 @@
+
 import Navigation from '@/components/Navigation';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+
 const About = () => {
   const obsessions = ['artificial intelligence', 'psychometrics & big-five', 'saas that doesn\'t suck', 'guitar riffs at 2am', 'kurt cobain\'s songwriting', 'biochemistry of everything'];
   const virtues = ['brutal honesty', 'relentless work ethic', 'creative chaos', 'existential questioning', 'coffee addiction', 'deadline-driven panic'];
-  return <div className="min-h-screen bg-background text-foreground">
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       <div className="pt-24 pb-16 px-4">
@@ -63,12 +67,14 @@ const About = () => {
           {/* Obsessions & Virtues */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-card border-border">
-              <h3 className="text-xl font-bold mb-6 text-accent">burning obsessions</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">burning obsessions</h3>
               <div className="space-y-3">
-                {obsessions.map((obsession, index) => <div key={index} className="flex items-center space-x-3">
+                {obsessions.map((obsession, index) => (
+                  <div key={index} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span className="text-muted-foreground">{obsession}</span>
-                  </div>)}
+                  </div>
+                ))}
               </div>
             </Card>
 
@@ -95,6 +101,8 @@ const About = () => {
           </Card>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default About;
