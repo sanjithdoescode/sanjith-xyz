@@ -1,28 +1,10 @@
 import Navigation from '@/components/Navigation';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-
 const About = () => {
-  const obsessions = [
-    'artificial intelligence',
-    'psychometrics & big-five',
-    'saas that doesn\'t suck',
-    'guitar riffs at 2am',
-    'kurt cobain\'s songwriting',
-    'biochemistry of everything',
-  ];
-
-  const virtues = [
-    'brutal honesty',
-    'relentless work ethic',
-    'creative chaos',
-    'existential questioning',
-    'coffee addiction',
-    'deadline-driven panic',
-  ];
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  const obsessions = ['artificial intelligence', 'psychometrics & big-five', 'saas that doesn\'t suck', 'guitar riffs at 2am', 'kurt cobain\'s songwriting', 'biochemistry of everything'];
+  const virtues = ['brutal honesty', 'relentless work ethic', 'creative chaos', 'existential questioning', 'coffee addiction', 'deadline-driven panic'];
+  return <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       <div className="pt-24 pb-16 px-4">
@@ -40,16 +22,13 @@ const About = () => {
             <div className="lg:col-span-1">
               <Card className="p-6 bg-card border-border">
                 <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center mb-4 overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/a6f8b573-9e0b-4b4c-99ad-5014bffe00d5.png" 
-                    alt="sanjith"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/a6f8b573-9e0b-4b4c-99ad-5014bffe00d5.png" alt="sanjith" className="w-full h-full object-cover" />
                 </div>
                 <div className="text-center space-y-2">
                   <h3 className="font-bold text-lg">sanjith</h3>
                   <p className="text-sm text-muted-foreground font-mono">cs undergrad '28</p>
-                  <Badge variant="outline" className="text-xs">caffeine-dependent</Badge>
+                  <Badge variant="outline" className="text-xs">20,000mg caffeine
+                </Badge>
                 </div>
               </Card>
             </div>
@@ -86,24 +65,20 @@ const About = () => {
             <Card className="p-8 bg-card border-border">
               <h3 className="text-xl font-bold mb-6 text-accent">burning obsessions</h3>
               <div className="space-y-3">
-                {obsessions.map((obsession, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                {obsessions.map((obsession, index) => <div key={index} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span className="text-muted-foreground">{obsession}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </Card>
 
             <Card className="p-8 bg-card border-border">
               <h3 className="text-xl font-bold mb-6 text-primary">relentless virtues</h3>
               <div className="space-y-3">
-                {virtues.map((virtue, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                {virtues.map((virtue, index) => <div key={index} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-muted-foreground">{virtue}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </Card>
           </div>
@@ -120,8 +95,6 @@ const About = () => {
           </Card>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
