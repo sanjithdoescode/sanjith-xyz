@@ -22,7 +22,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="font-mono text-lg font-bold text-primary hover:text-accent transition-colors">
-            sanjith.dev
+            sanjith.xyz
           </Link>
 
           {/* Desktop Navigation */}
