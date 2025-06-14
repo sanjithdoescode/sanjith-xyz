@@ -88,12 +88,12 @@ const Contact = () => {
                           href={contact.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="font-mono"
+                          className="font-mono text-center"
                         >
                           {contact.handle}
                         </a>
                       ) : (
-                        <span className="font-mono cursor-default">
+                        <span className="font-mono cursor-default text-center w-full">
                           {contact.handle}
                         </span>
                       )}
