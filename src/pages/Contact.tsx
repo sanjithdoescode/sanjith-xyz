@@ -1,8 +1,9 @@
 
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
-import { Mail, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const contactInfo = [
@@ -25,7 +26,8 @@ const Contact = () => {
       platform: 'LinkedIn',
       handle: 'linkedin/sanjithkarthik',
       url: 'https://linkedin.com/in/sanjithkarthik',
-      icon: Linkedin,
+      icon: null,
+      customImage: '/lovable-uploads/e8a8168c-a13e-49c3-ade6-fbff832f7170.png',
       description: 'professional stuff'
     },
     {
@@ -64,6 +66,8 @@ const Contact = () => {
                     <CardTitle className="flex items-center gap-3 text-lg">
                       {contact.customIcon ? (
                         <span className="text-primary text-xl font-bold">{contact.customIcon}</span>
+                      ) : contact.customImage ? (
+                        <img src={contact.customImage} alt={contact.platform} className="h-5 w-5" />
                       ) : (
                         <IconComponent className="h-5 w-5 text-primary" />
                       )}
@@ -127,3 +131,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
