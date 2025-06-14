@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
-import { Mail, X, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const contactInfo = [
@@ -17,7 +17,8 @@ const Contact = () => {
       platform: 'X (Twitter)',
       handle: '@sanjithkarthik',
       url: 'https://x.com/sanjithkarthik',
-      icon: X,
+      icon: null,
+      customIcon: '𝕏',
       description: 'random thoughts & updates'
     },
     {
@@ -61,7 +62,11 @@ const Contact = () => {
                 <Card key={contact.platform} className="bg-card border-border hover:border-primary/50 transition-all duration-200 group">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3 text-lg">
-                      <IconComponent className="h-5 w-5 text-primary" />
+                      {contact.customIcon ? (
+                        <span className="text-primary text-xl font-bold">{contact.customIcon}</span>
+                      ) : (
+                        <IconComponent className="h-5 w-5 text-primary" />
+                      )}
                       {contact.platform}
                     </CardTitle>
                   </CardHeader>
@@ -122,4 +127,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
