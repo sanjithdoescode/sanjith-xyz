@@ -41,7 +41,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/blog">
-              <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-medium px-8 py-3 text-lg">
+              <Button variant="outline" size="lg" className="border-foreground text-foreground hover:bg-foreground hover:text-background font-medium px-8 py-3 text-lg">
                 read my mind (blog)
               </Button>
             </Link>
@@ -61,7 +61,7 @@ const Index = () => {
             </Card>
             <Card className="p-6 bg-card border-border hover:border-primary/50 transition-colors">
               <div className="text-center space-y-2">
-                <div className="text-3xl font-bold text-accent font-mono">12+</div>
+                <div className="text-3xl font-bold text-primary font-mono">12+</div>
                 <div className="text-sm text-muted-foreground">side projects alive</div>
               </div>
             </Card>
