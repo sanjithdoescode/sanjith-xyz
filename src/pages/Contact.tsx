@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
@@ -33,7 +34,7 @@ const Contact = () => {
       handle: 'i am not a loser',
       url: '#',
       icon: Instagram,
-      description: ''
+      description: 'yeah, no'
     }
   ];
 
