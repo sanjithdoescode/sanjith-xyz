@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -40,8 +39,12 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             <div className="lg:col-span-1">
               <Card className="p-6 bg-card border-border">
-                <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center mb-4">
-                  <div className="text-6xl">🤓</div>
+                <div className="aspect-square bg-muted rounded-2xl flex items-center justify-center mb-4 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/9119b437-4683-4114-8344-bc0db103f6b4.png" 
+                    alt="sanjith"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="text-center space-y-2">
                   <h3 className="font-bold text-lg">sanjith</h3>
