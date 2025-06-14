@@ -213,7 +213,7 @@ Nevertheless, it was all a lie.`
 }, {
   id: 'early',
   title: 'Early',
-  date: '08/30/24',
+  date: '08-30-24',
   tags: ['mortality', 'fear', 'sickness'],
   preview: "If my life is like the snow, / That fades before the morning sun...",
   content: `If my life is like the snow,
