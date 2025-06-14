@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -100,26 +99,68 @@
     @apply dark;
   }
 
-  /* Custom text selection colors */
+  /* Custom text selection colors for all text variants */
   ::selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000000 !important;
+    color: #ffffff !important;
   }
 
   ::-moz-selection {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  /* Specific selection styles for different text color classes */
+  .text-muted-foreground::selection,
+  .text-primary::selection,
+  .text-accent::selection,
+  .text-foreground::selection,
+  .text-card-foreground::selection,
+  .text-secondary-foreground::selection {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  .text-muted-foreground::-moz-selection,
+  .text-primary::-moz-selection,
+  .text-accent::-moz-selection,
+  .text-foreground::-moz-selection,
+  .text-card-foreground::-moz-selection,
+  .text-secondary-foreground::-moz-selection {
+    background-color: #000000 !important;
+    color: #ffffff !important;
   }
 
   /* Special case for when background is already black/dark */
   .dark ::selection {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffffff !important;
+    color: #000000 !important;
   }
 
   .dark ::-moz-selection {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Dark mode specific selection styles for different text colors */
+  .dark .text-muted-foreground::selection,
+  .dark .text-primary::selection,
+  .dark .text-accent::selection,
+  .dark .text-foreground::selection,
+  .dark .text-card-foreground::selection,
+  .dark .text-secondary-foreground::selection {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .dark .text-muted-foreground::-moz-selection,
+  .dark .text-primary::-moz-selection,
+  .dark .text-accent::-moz-selection,
+  .dark .text-foreground::-moz-selection,
+  .dark .text-card-foreground::-moz-selection,
+  .dark .text-secondary-foreground::-moz-selection {
+    background-color: #ffffff !important;
+    color: #000000 !important;
   }
 }
 
