@@ -71,9 +71,7 @@ full stack dev. founder of unfounded companies.</p>
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm text-muted-foreground font-mono">
-            built by a 19-year-old insomnia demon. no ga tracking. no bullshit.
-          </p>
+          <p className="text-sm text-muted-foreground font-mono">thy shalt do thy work before thy work does you</p>
         </div>
       </footer>
     </div>;
