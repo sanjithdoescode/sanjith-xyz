@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -6,10 +5,8 @@ import GlitchText from '@/components/GlitchText';
 import AsciiBackground from '@/components/AsciiBackground';
 import Navigation from '@/components/Navigation';
 import { ArrowRight } from 'lucide-react';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <AsciiBackground />
       
@@ -20,18 +17,14 @@ const Index = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-mono leading-tight">
               i'm <GlitchText text="sanjith" className="text-primary" />.
             </h1>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              i don't sleep.
-            </h2>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">i like to work.</h2>
             <h3 className="text-xl md:text-3xl lg:text-4xl font-medium text-muted-foreground leading-tight">
               i build things that prove i exist.
             </h3>
           </div>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            19-year-old cs undergrad fueled by coffee, chaos, and an existential need to create something that matters.
-            no sleep, no excuses, just relentless building.
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">19-year-old cs undergrad.
+full stack dev. founder of unfounded companies.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Link to="/projects">
@@ -83,8 +76,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
