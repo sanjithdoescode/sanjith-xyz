@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import GlitchText from '@/components/GlitchText';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
   const location = useLocation();
 
   const navItems = [
@@ -22,8 +24,17 @@ const Navigation = () => {
       <div className="bg-background/80 backdrop-blur-lg border border-border/50 rounded-2xl shadow-lg shadow-black/10">
         <div className="px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link to="/" className="font-mono text-lg font-bold text-primary hover:text-accent transition-colors">
-              sanjith.xyz
+            <Link 
+              to="/" 
+              className="font-mono text-lg font-bold text-primary transition-colors"
+              onMouseEnter={() => setIsLogoHovered(true)}
+              onMouseLeave={() => setIsLogoHovered(false)}
+            >
+              {isLogoHovered ? (
+                <GlitchText text="sanjith.xyz" className="text-primary" />
+              ) : (
+                "sanjith.xyz"
+              )}
             </Link>
 
             {/* Desktop Navigation */}
