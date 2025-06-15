@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
@@ -41,7 +40,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      
       <div className="pt-24 pb-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -60,7 +58,7 @@ const Contact = () => {
             {contactInfo.map((contact) => {
               const IconComponent = contact.icon;
               return (
-                <Card key={contact.platform} className="bg-card border-border hover:border-primary/50 transition-all duration-200 group">
+                <Card key={contact.platform} className="bg-card border-border hover:border-primary/60 hover:shadow-lg hover:scale-[1.025] transition-all duration-300 group">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3 text-lg">
                       {contact.customIcon ? (
@@ -126,9 +124,9 @@ const Contact = () => {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
+      <footer className="border-t border-border py-8 px-4 bg-background/70">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm text-muted-foreground font-mono">
+          <p className="text-sm text-primary font-mono">
             built by a sleep-deprived cs student. no spam, just real talk.
           </p>
         </div>

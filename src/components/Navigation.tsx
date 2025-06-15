@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -72,8 +71,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t border-border/30">
-            <div className="px-4 py-4 space-y-1 bg-background/60 backdrop-blur-sm rounded-b-2xl">
+          <div className="md:hidden border-t border-border/30 animate-fade-in">
+            <div className="px-4 py-4 space-y-1 bg-background/60 backdrop-blur-sm rounded-b-2xl transition-all duration-300">
               {navItems.map((item) => (
                 <Link
                   key={item.name}

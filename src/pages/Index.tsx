@@ -69,9 +69,9 @@ full stack dev. founder of unfounded companies.</p>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
+      <footer className="border-t border-border py-8 px-4 bg-background/70">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm text-muted-foreground font-mono">thy shalt do thy work before thy work does you</p>
+          <p className="text-sm text-primary font-mono">thy shalt do thy work before thy work does you</p>
         </div>
       </footer>
     </div>;
