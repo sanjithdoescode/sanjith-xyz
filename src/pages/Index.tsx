@@ -5,10 +5,8 @@ import GlitchText from '@/components/GlitchText';
 import AsciiBackground from '@/components/AsciiBackground';
 import Navigation from '@/components/Navigation';
 import { ArrowRight } from 'lucide-react';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <AsciiBackground />
       
@@ -16,8 +14,8 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-mono leading-tight flex items-center justify-center gap-2">
-              <span>i'm</span> <GlitchText text="sanjith" className="text-primary" /><span>.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-mono leading-tight">
+              i'm <GlitchText text="sanjith" className="text-primary" />.
             </h1>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">i like to work.</h2>
             <h3 className="text-xl md:text-3xl lg:text-4xl font-medium text-muted-foreground leading-tight">
@@ -78,8 +76,6 @@ full stack dev. founder of unfounded companies.</p>
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
