@@ -1,12 +1,16 @@
+
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import GlitchText from '@/components/GlitchText';
 import AsciiBackground from '@/components/AsciiBackground';
 import Navigation from '@/components/Navigation';
+import ToolsCarousel from '@/components/ToolsCarousel';
 import { ArrowRight } from 'lucide-react';
+
 const Index = () => {
-  return <div className="min-h-screen bg-background text-foreground">
+  return (
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <AsciiBackground />
       
@@ -23,8 +27,9 @@ const Index = () => {
             </h3>
           </div>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">19-year-old cs undergrad.
-full stack dev. founder of unfounded companies.</p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            19-year-old cs undergrad. full stack dev. founder of unfounded companies.
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Link to="/projects">
@@ -38,6 +43,14 @@ full stack dev. founder of unfounded companies.</p>
                 read my mind (blog)
               </Button>
             </Link>
+          </div>
+
+          {/* Tools Section */}
+          <div className="pt-16">
+            <div className="space-y-8">
+              <h4 className="text-lg font-mono text-muted-foreground">tools</h4>
+              <ToolsCarousel />
+            </div>
           </div>
         </div>
       </section>
@@ -74,6 +87,8 @@ full stack dev. founder of unfounded companies.</p>
           <p className="text-sm text-primary font-mono">thy shalt do thy work before thy work does you</p>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
