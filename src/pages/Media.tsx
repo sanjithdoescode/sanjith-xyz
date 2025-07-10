@@ -1,7 +1,10 @@
+import Navigation from '@/components/Navigation';
+
 const Media = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-6 py-12">
+      <Navigation />
+      <div className="container mx-auto px-6 py-12 pt-24">
         {/* Header */}
         <div className="text-center space-y-6 mb-16">
           <h1 className="text-4xl md:text-6xl font-bold font-mono">
