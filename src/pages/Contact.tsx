@@ -45,7 +45,7 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h1 className="text-4xl md:text-6xl font-bold font-mono">
-              hire me.
+              konneckt?
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               got a project? need someone who codes at 3am? 

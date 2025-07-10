@@ -15,7 +15,7 @@ const Navigation = () => {
     { name: 'projects', path: '/projects' },
     { name: 'read my mind', path: '/blog' },
     { name: 'media', path: '/media' },
-    { name: 'hire me', path: '/contact' },
+    { name: 'connekt', path: '/contact' },
   ];
 
   return (
