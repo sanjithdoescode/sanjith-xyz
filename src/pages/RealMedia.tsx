@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation';
 
-const Media = () => {
+const RealMedia = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
@@ -82,4 +82,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export default RealMedia;
