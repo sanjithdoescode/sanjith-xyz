@@ -11,7 +11,7 @@ const RealMedia = () => {
             media.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            jk, lmao? 😏 gotcha! here's some actual content
+            jk, lmao?
           </p>
         </div>
 
