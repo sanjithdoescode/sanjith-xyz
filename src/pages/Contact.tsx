@@ -127,7 +127,7 @@ const Contact = () => {
       <footer className="border-t border-border py-8 px-4 bg-background/70">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm text-primary font-mono">
-            built by a sleep-deprived cs student. no spam, just real talk.
+            ciao!
           </p>
         </div>
       </footer>
