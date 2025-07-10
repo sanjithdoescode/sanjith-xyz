@@ -39,25 +39,37 @@ const About = () => {
 
             <div className="lg:col-span-2">
               <Card className="p-8 bg-card border-border h-full">
-                <h2 className="text-2xl font-bold mb-6 text-primary">the unfiltered truth</h2>
+                <h2 className="text-2xl font-bold mb-6 text-primary">porfile</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    i'm a 19-year-old cs undergrad who thinks sleep is optional and coffee is mandatory. 
-                    currently surviving on a diet of energy drinks, imposter syndrome, and the relentless 
-                    need to build something that proves i'm not just another college kid with delusions of grandeur.
+                    hi.
                   </p>
                   <p>
-                    obsessed with ai, psychology, and the intersection of technology and human behavior. 
-                    i build saas products because i'm convinced i can solve problems better than the 
-                    billion-dollar companies who somehow made everything complicated and boring.
+                    i have been studying and messing around with full stack for awhile. <em>cough cough cursor cough cough</em>.
                   </p>
                   <p>
-                    when i'm not coding at 3am, you'll find me dissecting movie plots, analyzing song structures, 
-                    or wondering why humans are so predictably unpredictable. i play guitar badly but with passion, 
-                    and i write code the same way.
+                    been into computers for as long as i can remember. trying to convert my obsession with it into something useful.
+                  </p>
+                  <p>
+                    been working with .tsx, .js, .py, .java.
+                  </p>
+                  <p>
+                    ai and psychology. intersection of technology and human behavior is ONE of my fever dreams.
+                  </p>
+                  <p>
+                    love to brainstorm ideas and (ideally) turn them real.
+                  </p>
+                  <p>
+                    apart from that, i really like rock and metal. sometimes i'd imagine myself as a part-time singing guitarist. i also write here and there.
+                  </p>
+                  <p>
+                    mentally ill, but trying to be better! +1% everyday.
+                  </p>
+                  <p>
+                    i don't have much for you today. with time and my commitment, it will change. pinky promise!
                   </p>
                   <p className="text-foreground font-medium">
-                    goal: create something that matters before i graduate and get absorbed into corporate mediocrity.
+                    <strong>tldr - create something that matters. current obstacle - skill issue</strong>
                   </p>
                 </div>
               </Card>
