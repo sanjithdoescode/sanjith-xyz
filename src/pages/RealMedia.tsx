@@ -23,7 +23,7 @@ const RealMedia = () => {
               alt="Discord notification"
               className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             />
-            <p className="text-sm text-muted-foreground text-center font-mono">the vibe check 💭</p>
+            <p className="text-sm text-muted-foreground text-center font-mono">the vibe check</p>
           </div>
           
           <div className="break-inside-avoid space-y-4 mb-6">
@@ -32,7 +32,7 @@ const RealMedia = () => {
               alt="At hackathon event"
               className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             />
-            <p className="text-sm text-muted-foreground text-center font-mono">me at the hackathon 👨‍💻</p>
+            <p className="text-sm text-muted-foreground text-center font-mono">me at the hackathon</p>
           </div>
           
           <div className="break-inside-avoid space-y-4 mb-6">
@@ -41,7 +41,7 @@ const RealMedia = () => {
               alt="Hackathon certificate"
               className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             />
-            <p className="text-sm text-muted-foreground text-center font-mono">hackathon runner-up 🏆</p>
+            <p className="text-sm text-muted-foreground text-center font-mono">hackathon runner-up</p>
           </div>
           
           <div className="break-inside-avoid space-y-4 mb-6">
@@ -50,7 +50,7 @@ const RealMedia = () => {
               alt="Spotify personality analyzer"
               className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             />
-            <p className="text-sm text-muted-foreground text-center font-mono">spotify says i'm deep 🎵</p>
+            <p className="text-sm text-muted-foreground text-center font-mono">spotify says i'm deep</p>
           </div>
           
           <div className="break-inside-avoid space-y-4 mb-6">
@@ -59,7 +59,7 @@ const RealMedia = () => {
               alt="Hackathon display"
               className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             />
-            <p className="text-sm text-muted-foreground text-center font-mono">farm direct - zero hunger 🌾</p>
+            <p className="text-sm text-muted-foreground text-center font-mono">farm direct - zero hunger</p>
           </div>
           
           <div className="break-inside-avoid space-y-4 mb-6">
@@ -68,7 +68,7 @@ const RealMedia = () => {
               alt="Mountain landscape"
               className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             />
-            <p className="text-sm text-muted-foreground text-center font-mono">nature therapy 🏔️</p>
+            <p className="text-sm text-muted-foreground text-center font-mono">nature therapy</p>
           </div>
         </div>
         
